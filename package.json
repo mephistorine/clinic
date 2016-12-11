@@ -1,0 +1,19 @@
+{
+  "name": "clinic",
+  "version": "1.0.0",
+  "description": "It is my 5th project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stylesam",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-stylus": "^2.6.0"
+  }
+}

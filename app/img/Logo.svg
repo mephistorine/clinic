@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="227px" height="48px" viewBox="0 0 227 48">
+<style type="text/css"><![CDATA[
+.style0 {
+  font-size: 12px;
+  font-family: "OpenSans-Bold";
+  fill: rgb(0,0,0);
+  text-transform: uppercase;
+}
+.style1 {
+  font-size: 12px;
+  font-family: "OpenSans";
+  fill: rgb(0,0,0);
+}
+.style2 {
+  font-size: 12px;
+  font-family: "OpenSans-Bold";
+  fill: rgb(255,255,255);
+  text-transform: uppercase;
+}
+]]></style>
+<filter filterUnits="objectBoundingBox" x="0.00" y="0.00" width="100.00" height="100.00" id="filter0">
+<feFlood flood-color="rgb(249,105,0)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="SourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<g><text transform="matrix(1.67,0.00,0.00,1.66,59.83,14.91)" class="style0"><tspan x="0.00 6.71 14.98 24.62 30.00 37.34 45.16 51.65 54.19 62.09 69.38 79.03" fill="rgb(0,0,0)">Company Name</tspan></text><text transform="matrix(1.40,0.00,0.00,1.40,61.10,37.81)" class="style1"><tspan x="0.00 5.20 10.98 17.69 20.23 25.90 28.70 35.36 41.38 43.92 51.73 58.32 64.33 69.08 71.63 79.45 85.46 89.27" fill="rgb(0,0,0)">Tag Line Goes Here</tspan></text><path fillRule="evenodd" d="M 48.29-0C 48.78-0 49.19 0.16 49.51 0.48 49.84 0.81 50 1.21 50 1.71 50 1.71 50 37.47 50 37.47 50 37.81 49.9 38.13 49.69 38.43 49.48 38.74 49.22 38.95 48.91 39.06 48.91 39.06 25.71 47.89 25.71 47.89 25.56 47.96 25.35 48 25.09 48 24.82 48 24.61 47.96 24.46 47.89 24.46 47.89 1.14 39.06 1.14 39.06 0.8 38.95 0.52 38.74 0.31 38.43 0.1 38.13 0 37.81 0 37.47 0 37.47 0 1.71 0 1.71 0 1.21 0.17 0.81 0.51 0.48 0.86 0.16 1.26-0 1.71-0 1.71-0 48.29-0 48.29-0 48.29-0 48.29-0 48.29-0Z" fill="rgb(0,0,0)" filter="url(#filter0)"/><text transform="matrix(4.67,0.00,0.00,4.71,9.00,41.44)" class="style2"><tspan x="0.00" fill="rgb(255,255,255)">+</tspan></text></g></svg>
