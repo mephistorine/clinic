@@ -1,0 +1,35 @@
+@import '_smart-grid'
+
+main-color = #fa6900
+second-color = #69d2e7
+
+body
+	font-family 'Open Sans', sans-serif
+	margin 0
+	overflow-x hidden
+
+
+.top-menu
+	display flex
+	flex-direction row
+	justify-content space-between
+
+.top-menu-list
+	ul
+		list-style none
+
+.header
+	wrapper()
+	max-width none
+	background second-color
+	height 50vh
+
+.hello-block
+	display flex
+	color #fffs
+	align-items center
+	justify-content center
+
+
+.logo-container, .top-menu-list
+	col-md-6()

@@ -1,13 +1,29 @@
 doctype html
-html(lang='en')
+html(lang='ru')
 	head
 		meta(charset='utf-8')
-		title Clinic
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Online Clinic
+
+		link(rel='shortcut icon', type='image/png', href='img/favicon.png')
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+
+		link(href='lib/css-hamburgers/hamburgers.min.css', rel='stylesheet')
+		link(href='css/general.css', rel='stylesheet')
 	body
 		.wrapper
-			header.main-headeer
-				.top-bar
-					.logo
-					.toggle-menu
-			main.main-block
-			footer.main-footer
+			header.header
+				.top-menu
+					.logo-container
+						a(href='index.html'): img(src='img/logo.png', alt='Our logo')
+					.top-menu-list
+						.hamburger.hamburger--squeeze
+							.hamburger-box
+								.hamburger-inner
+				.hello-block
+					h1.hello-title Hello
+					br
+					h3.hello-descr We are online clinic
+			main.main
+		script(src='lib/jquery/jquery-v3.1.1-min.js')
+		script(src='js/general.js')

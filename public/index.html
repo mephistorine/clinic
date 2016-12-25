@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Clinic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Clinic</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="lib/css-hamburgers/hamburgers.min.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-headeer">
-        <div class="top-bar">
-          <div class="logo"></div>
-          <div class="toggle-menu"></div>
+      <header class="header">
+        <div class="top-menu">
+          <div class="logo-container"><a href="index.html"><img src="img/logo.png" alt="Our logo"></a></div>
+          <div class="top-menu-list">
+            <div class="hamburger hamburger--squeeze">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hello-block">
+          <h1 class="hello-title">Hello</h1><br>
+          <h3 class="hello-descr">We are online clinic</h3>
         </div>
       </header>
-      <main class="main-block"></main>
-      <footer class="main-footer"></footer>
+      <main class="main"></main>
     </div>
+    <script src="lib/jquery/jquery-v3.1.1-min.js"></script>
+    <script src="js/general.js"></script>
   </body>
 </html>

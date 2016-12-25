@@ -1,11 +1,17 @@
-var gulp        = require('gulp')
-		pug         = require('gulp-pug'),
-		styl        = require('gulp-stylus'),
-		sourcemaps  = require('gulp-sourcemaps'),
-		notify      = require('gulp-notify'),
-		plumber     = require('gulp-plumber'),
-		browserSync = require('browser-sync').create();
+var gulp       	 = require('gulp'),
+		pug          = require('gulp-pug'),
+		styl         = require('gulp-stylus'),
+		sourcemaps   = require('gulp-sourcemaps'),
+		notify       = require('gulp-notify'),
+		plumber      = require('gulp-plumber'),
+		browserSync  = require('browser-sync').create(),
+		smartgrid  	 = require('smart-grid'),
+		combineMq    = require('gulp-combine-mq'),
+		uglyfly      = require('gulp-uglyfly'),
+		autoprefixer = require('gulp-autoprefixer');
 
+var src  = 'app/',
+		dist = 'public/';
 //Default
 gulp.task('default', function(){
 	console.log('Gulp works!');
@@ -13,7 +19,7 @@ gulp.task('default', function(){
 
 //Pug
 gulp.task('pug', function() {
-	return gulp.src(['app/pug/*.pug', '!app/pug/_*.pug'])
+	return gulp.src([src + 'pug/*.pug','!' + src + 'pug/_*.pug'])
 		.pipe(plumber({
 			errorHandler: notify.onError(err => ({
 				title: 'Task : Pug',
@@ -23,13 +29,13 @@ gulp.task('pug', function() {
 		.pipe(pug({
 			pretty: true
 		}))
-		.pipe(gulp.dest('public/'))
+		.pipe(gulp.dest(dist))
 		.pipe(browserSync.stream());
 }); 
 
 //Stylus
 gulp.task('styl', function(){
-	return gulp.src(['app/stylus/**/*.styl', '!app/stylus/**/_*.styl'])
+	return gulp.src([src + 'stylus/**/*.styl','!' + src + 'stylus/**/_*.styl'])
 		.pipe(plumber({
 			errorHandler: notify.onError(err => ({
 				title: 'Task : Stylus',
@@ -38,9 +44,22 @@ gulp.task('styl', function(){
 		}))
 		.pipe(sourcemaps.init())
 		.pipe(styl())
+		.pipe(combineMq({
+			beautify: true}
+		))
+		.pipe(autoprefixer({
+			 browsers: ['last 10 versions']
+		}))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('public/css/'))
+		.pipe(gulp.dest(dist +'css/'))
 		.pipe(browserSync.stream());
+});
+
+//JS compress
+gulp.task('compress', function() {
+  return gulp.src(src + 'js/**/*.js')
+    .pipe(uglyfly())
+    .pipe(gulp.dest(dist + 'js/'));
 });
 
 gulp.task('serve', ['pug', 'styl'], function() {
@@ -52,7 +71,8 @@ gulp.task('serve', ['pug', 'styl'], function() {
 		}
 	});
 
-	gulp.watch('app/**/*.pug', ['pug']);
-	gulp.watch('app/stylus/**/*.styl', ['styl']);
-	gulp.watch(['public/*.html', 'public/js/*.js']).on('change', browserSync.reload);
+	gulp.watch(src + '**/*.pug', ['pug']);
+	gulp.watch(src + 'stylus/**/*.styl', ['styl']);
+	gulp.watch(src + 'js/**/*.js', ['compress']);
+	gulp.watch([dist +'*.html', dist +'js/**/*.js']).on('change', browserSync.reload);
 });

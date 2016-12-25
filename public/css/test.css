@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    justify-content: center;
+  }
+
+  .container {
+    width: calc(33.333333333333336% - 30px);
+  }
+}
