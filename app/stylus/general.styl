@@ -23,17 +23,22 @@ body
 	max-width none
 	background second-color
 	height 50vh
+	min-height 260px
 
 .hello-block
-	display flex
-	flex-wrap wrap
+	row-flex()
 	color #fff
 	align-items center
 	text-align center
 
 
 .hello-title,
-.hello-descr
+.hello-descr,
+.top-menu,
+.hello-block
 	col-12()
+
+.hello-title,
+.hello-descr
 	margin 0
 	text-transform uppercase
