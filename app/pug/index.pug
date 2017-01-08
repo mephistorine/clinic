@@ -15,7 +15,7 @@ html(lang='ru')
 			header.header
 				.top-menu
 					.logo-container
-						a(href='index.html'): img(src='img/logo.png', alt='Our logo')
+						a(href='/'): img(src='img/logo.png', alt='Our logo')
 					.top-menu-list
 						.hamburger.hamburger--squeeze
 							.hamburger-box
@@ -25,5 +25,31 @@ html(lang='ru')
 						span.hello-title Hello
 						span.hello-descr We are online clinic
 			main.main
+				section.aboutus
+					.aboutus-descr
+						h1.aboutus-title About Us
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.aboutus-offers
+						.aboutus-offers-container
+							.offers-image
+								img(src='img/offer-image-1.svg', alt='offer-image-1')
+							p.offers-title.
+								Lorem ipsum dolor sit amet
+						.aboutus-offers-container
+							.offers-image
+								img(src='img/offer-image-2.svg', alt='offer-image-2')
+							p.offers-title.
+								Lorem ipsum dolor sit amet
+						.aboutus-offers-container
+							.offers-image
+								img(src='img/offer-image-3.svg', alt='offer-image-3')
+							p.offers-title.
+								Lorem ipsum dolor sit amet
+				section.browsers
+					p.browsers-descr.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					.browsers-img
+						img(src='img/browsers.png', alt='Browsers image')
 		script(src='lib/jquery/jquery-v3.1.1-min.js')
 		script(src='js/general.js')

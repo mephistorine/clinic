@@ -1,14 +1,15 @@
-var gulp       	 = require('gulp'),
-		pug          = require('gulp-pug'),
-		styl         = require('gulp-stylus'),
-		sourcemaps   = require('gulp-sourcemaps'),
-		notify       = require('gulp-notify'),
-		plumber      = require('gulp-plumber'),
-		browserSync  = require('browser-sync').create(),
-		smartgrid  	 = require('smart-grid'),
-		combineMq    = require('gulp-combine-mq'),
-		uglyfly      = require('gulp-uglyfly'),
-		autoprefixer = require('gulp-autoprefixer');
+var gulp       = require('gulp'),
+	pug          = require('gulp-pug'),
+	styl         = require('gulp-stylus'),
+	sourcemaps   = require('gulp-sourcemaps'),
+	notify       = require('gulp-notify'),
+	plumber      = require('gulp-plumber'),
+	browserSync  = require('browser-sync').create(),
+	smartgrid  	 = require('smart-grid'),
+	combineMq    = require('gulp-combine-mq'),
+	uglyfly      = require('gulp-uglyfly'),
+	autoprefixer = require('gulp-autoprefixer');
+	//csscomb 		 = require('gulp-csscomb');
 
 var src  = 'app/',
 		dist = 'public/';
@@ -50,6 +51,7 @@ gulp.task('styl', function(){
 		.pipe(autoprefixer({
 			 browsers: ['last 10 versions']
 		}))
+		//.pipe(csscomb())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(dist +'css/'))
 		.pipe(browserSync.stream());
