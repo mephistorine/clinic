@@ -8,6 +8,13 @@ body
 	margin 0
 	overflow-x hidden
 
+section
+	padding-top 1rem
+	padding-bottom 1rem
+
+input[name='slider-switcher']
+	width 18px
+	height 18px
 
 .top-menu
 	flex-direction row
@@ -33,14 +40,7 @@ body
 
 .hello-block
 	height 80.5%
-	justify-content center
 	font-weight bold
-
-.hello-title,
-.hello-descr,
-//.top-menu,
-//.hello-block
-	col-12()
 
 .hello-title
 	font-size 4em
@@ -75,9 +75,6 @@ body
 .main
 	background #f1f1f1
 
-.aboutus-offers
-	justify-content center
-
 .aboutus-offers-container
 	text-align center
 	col-lg-3()
@@ -86,7 +83,6 @@ body
 	col-xs-12()
 
 .browsers
-	justify-content center
 	background-color  #fa6900
 	&-descr
 		color  #fffefe
@@ -97,5 +93,32 @@ body
 .browsers,
 .hello-block,
 .hello-text-container,
-.aboutus-offers
+.aboutus-offers,
+.testimonials
 	row-flex()
+
+.browsers,
+.aboutus-offers,
+.hello-block,
+.testimonials
+	justify-content center
+
+.hello-title,
+.hello-descr,
+.testimonials-photo,
+.pesona-title,
+.testimonials-descr,
+.slider-switcher
+//.top-menu,
+//.hello-block
+	col-12()
+
+.testimonials-descr
+	max-width 667px
+
+.testimonials,
+.slider-switcher
+	text-align center
+
+.testimonials-slider-container
+	margin 1rem 0 1rem 0

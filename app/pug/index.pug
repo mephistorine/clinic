@@ -1,3 +1,4 @@
+//- var testimonials = {'Tanya K. Smit': 'General Physician', 'Diana M. Miyaki' : 'General surgeon','Anastasia T. Jey' : 'General pediatrician'};
 doctype html
 html(lang='ru')
 	head
@@ -51,5 +52,19 @@ html(lang='ru')
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					.browsers-img
 						img(src='img/browsers.png', alt='Browsers image')
-		script(src='lib/jquery/jquery-v3.1.1-min.js')
+				section.testimonials
+					.testimonials-slider-container
+						.testimonials-photo
+							img(src='img/persona.svg', alt='photo persona')
+						span.pesona-title
+							strong=index
+							br
+							i= val
+						p.testimonials-descr.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.slider-switcher
+						input(type='radio' name='slider-switcher' checked).slider-switcher-firts
+						input(type='radio' name='slider-switcher').slider-switcher-second
+						input(type='radio' name='slider-switcher').slider-switcher-third
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
 		script(src='js/general.js')
