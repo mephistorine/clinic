@@ -3,6 +3,10 @@
 main-color = #fa6900
 second-color = #69d2e7
 
+size(w, h)
+	width w
+	height h	
+
 body
 	font-family 'Open Sans', sans-serif
 	margin 0
@@ -30,6 +34,7 @@ input[name='slider-switcher']
 	background second-color
 	height 50vh
 	min-height 500px
+	padding-top 1.5rem
 
 .hello-block,
 .hello-text-container
@@ -94,7 +99,9 @@ input[name='slider-switcher']
 .hello-block,
 .hello-text-container,
 .aboutus-offers,
-.testimonials
+.testimonials,
+.footer-info,
+.footer
 	row-flex()
 
 .browsers,
@@ -109,8 +116,8 @@ input[name='slider-switcher']
 .pesona-title,
 .testimonials-descr,
 .slider-switcher
-//.top-menu,
-//.hello-block
+.footer-info,
+.footer-bar
 	col-12()
 
 .testimonials-descr
@@ -130,3 +137,62 @@ input[name='slider-switcher']
 		max-width 433px
 		margin 4rem
 		color #fff
+
+.hamburger
+	padding 0
+
+.logo-container-footer
+	background url(../img/logo.png) no-repeat
+	size(227px, 48px)
+	margin-bottom 1rem
+
+.footer
+	margin-left 1rem
+	padding 1rem
+	&-info
+		padding 3rem 4rem 0 4rem
+
+.company-info,
+.latest-post-container
+	col-lg-6()
+	col-md-6()
+	col-sm-12()
+	col-xs-12()
+
+.social-btn-container
+	font-size 1.4rem
+
+.social-btn
+	color #000
+	border 1px solid #000
+	padding 5px
+	transition color,background 250ms linear 0s
+	&:hover
+		color #fff
+		border-color second-color
+		background second-color
+		
+.company-descr
+	max-width 80%
+
+.latest-post-text,
+.latest-post,
+//.footer-bar
+	display flex
+
+.latest-post-text
+	flex-wrap wrap
+	font-size 14px
+
+.latest-post-title,
+.latest-post-except
+	margin 0 10px
+
+.latest-post
+	margin 15px 0
+
+.footer-bar
+	background second-color
+	//margin-left 1rem
+	//col-12()
+	

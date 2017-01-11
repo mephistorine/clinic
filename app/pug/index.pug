@@ -7,7 +7,8 @@ html(lang='ru')
 		title Online Clinic
 
 		link(rel='shortcut icon', type='image/png', href='img/favicon.png')
-		link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+		link(href='//fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+		link(href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet')
 
 		link(href='lib/css-hamburgers/hamburgers.min.css', rel='stylesheet')
 		link(href='css/general.css', rel='stylesheet')
@@ -15,8 +16,7 @@ html(lang='ru')
 		.wrapper
 			header.header
 				.top-menu
-					.logo-container
-						a(href='/'): img(src='img/logo.png', alt='Our logo')
+					.logo-container: a(href='/'): img(src='img/logo.png', alt='Our logo')
 					.top-menu-list
 						.hamburger.hamburger--squeeze
 							.hamburger-box
@@ -32,34 +32,23 @@ html(lang='ru')
 						p.
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					.aboutus-offers
-						.aboutus-offers-container
-							.offers-image
-								img(src='img/offer-image-1.svg', alt='offer-image-1')
-							p.offers-title.
-								Lorem ipsum dolor sit amet
-						.aboutus-offers-container
-							.offers-image
-								img(src='img/offer-image-2.svg', alt='offer-image-2')
-							p.offers-title.
-								Lorem ipsum dolor sit amet
-						.aboutus-offers-container
-							.offers-image
-								img(src='img/offer-image-3.svg', alt='offer-image-3')
-							p.offers-title.
-								Lorem ipsum dolor sit amet
+						each val in [1, 2, 3]
+							.aboutus-offers-container
+								.offers-image
+									img(src='img/offer-image-' + val + '.svg', alt='offer-image-' + val)
+								p.offers-title.
+									Lorem ipsum dolor sit amet
 				section.browsers
 					p.browsers-descr.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					.browsers-img
-						img(src='img/browsers.png', alt='Browsers image')
+					.browsers-img: img(src='img/browsers.png', alt='Browsers image')
 				section.testimonials
 					.testimonials-slider-container
-						.testimonials-photo
-							img(src='img/persona.svg', alt='photo persona')
+						.testimonials-photo: img(src='img/persona.svg', alt='photo persona')
 						span.pesona-title
-							strong=index
+							strong Alice G. Mullins
 							br
-							i= val
+							i General Physician
 						p.testimonials-descr.
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					.slider-switcher
@@ -70,7 +59,6 @@ html(lang='ru')
 					.bullet-points-content
 						h1 Lorem ipsum dolor sit amet
 						h3 Sed do eiusmod tempor
-
 						p.
 							Sed ut perspiciatis unde omnis iste natus error sit volupta 
 							accusantium doloremque laudantium.
@@ -81,6 +69,45 @@ html(lang='ru')
 							Nemo enim ipsam voluptatem quia voluptas sit aspern
 							atur aut odit aut fugit, sed quia consequuntur magni dolores
 							eos qui ratione voluptatem sequi nesciunt.
-
+				footer.footer
+					.footer-info
+						.company-info
+							.logo-container-footer
+							.social-btn-container
+								a(href='/'): i.social-btn.fa.fa-facebook(aria-hidden='true')
+								a(href='/'): i.social-btn.fa.fa-twitter(aria-hidden='true')
+								a(href='/'): i.social-btn.fa.fa-pinterest-p(aria-hidden='true')
+								a(href='/'): i.social-btn.fa.fa-linkedin(aria-hidden='true')
+							.company-descr
+								p.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+								p.
+									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+						.latest-post-container
+							h2 Latest Post
+							.latest-post
+								.latest-post-miniature: img(src='//lorempixel.com/93/93/', alt='post miniature')
+								// Просто глаза кровью обливаются от такоего решения, но только такое я нашел :(
+								.latest-post-text
+									h3.latest-post-title Lorem ipsum dolor sit amet cons...
+									p.latest-post-except.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.latest-post
+								.latest-post-miniature: img(src='//lorempixel.com/93/93/', alt='post miniature')
+								// Просто глаза кровью обливаются от такоего решения, но только такое я нашел :(
+								.latest-post-text
+									h3.latest-post-title Lorem ipsum dolor sit amet cons...
+									p.latest-post-except.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.latest-post
+								.latest-post-miniature: img(src='//lorempixel.com/93/93/', alt='post miniature')
+								// Просто глаза кровью обливаются от такоего решения, но только такое я нашел :(
+								.latest-post-text
+									h3.latest-post-title Lorem ipsum dolor sit amet cons...
+									p.latest-post-except.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					.footer-bar
+						p Terms of Use &#124; Privacy &amp; cookie
+						p Copyright &copy; 2017, All rights reserved.
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
 		script(src='js/general.js')
